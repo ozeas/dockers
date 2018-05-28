@@ -1,0 +1,1 @@
+RUN mysql -u root -p123 -e "CREATE DATABASE testando"

@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mysql55:
+    image: mysql:5.5
+    container_name: mysql5.5
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_USER: root
+    network_mode: "adsoft"
+    
+  mysql57:
+    image: mysql:5.7
+    container_name: mysql5.7
+    restart: always
+    build: .
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MYSQL_USER: root
+    network_mode: "adsoft"
+
+networks:
+  adsoft:
+    external: true
